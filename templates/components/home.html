@@ -1,0 +1,11 @@
+{% extends 'index.html'%}
+
+
+{%block content%}
+      <a href="{% url 'createTodo' %}" class="btn btn-primary">Add new Todo</a>
+      <ul>
+            {% for todo in todos %}
+            <li ><a href="details/{{todo.id}}">{{ todo.name }}</a></li>
+            {% endfor %}
+      </ul>
+{%endblock content%}

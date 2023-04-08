@@ -1,0 +1,13 @@
+{% extends 'index.html'%}
+
+
+{%block content%}
+      <form  class="form-group" method="POST">
+        {% csrf_token %}
+        <table>
+
+          {{itemform.as_table}}
+        </table>
+        <button type="submit" class="btn btn-primary">Create TodoItem</button>
+      </form>
+{%endblock content%}
